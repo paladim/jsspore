@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <title>game</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="common.js"></script>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        #myCanvas {
+            border: 1px #CCC solid;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="myCanvas" width="500" height="500">
+            
+        </canvas>
+        
+    </div>
+    <script>
+        (function ($) {
+
+            $(document).mousemove(function (e) {
+                mx = e.pageX;
+                my = e.pageY;
+            });
+
+            ws_init();
+
+            mainCanvas = document.getElementById("myCanvas");
+            mainContext = mainCanvas.getContext('2d');
+
+            mx = 0;
+            my = 0;
+
+            item = new Item("Hello", 50, 150, 150);
+            draw();
+
+})(jQuery);
+</script>
+</body>
+</html>
